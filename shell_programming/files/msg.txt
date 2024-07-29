@@ -1,0 +1,115 @@
+How about using the su command?
+
+$ whoami
+user1
+$ su - user2
+Password:
+$ whoami
+user2
+$ exit
+logout
+If you want to log in as root, there's no need to specify username:
+
+$ whoami
+user1
+$ su -
+Password:
+$ whoami
+root
+$ exit
+logout
+Generally, you can use sudo to launch a new shell as the user you want; the -u flag lets you specify the username you want:
+
+$ whoami
+user1
+$ sudo -u user2 zsh
+$ whoami
+user2
+
+// to display/open contents of file
+use cat command
+
+//to add content to a file
+echo "hello" >> <filename>
+
+//update vs upgrade
+
+update -it updates the meta data of packages, that is what new versions are available in the market
+upgrade - it upgrades the new versions available in my local i.e versions given by update command 
+
+//remove vs purge command
+
+remove will delete files of a packages
+purge will remove all the files which were not removed by remove command
+
+//services vs packages
+
+services start automatically when the system boots and packages can be stopped and started by us
+systemd - manage services in computer
+daemon  - processess or services run in background like audio, webcam and many more(win+r and type servies.msc will give all the servies in computer) 
+
+drivers helps to setup connection between hardware and os so that we can run our services.
+
+restart vs reload
+
+restart - reboot
+reload - refresh
+
+How to setup ssh for github
+Important git commands:
+    git add . (Add all)
+    git commit -m "Message"
+    git push
+    git  stash
+    git pull
+    git stash apply
+    git remote -v
+    - Rebase(add the feature branch commits on tip of main/master branch)
+        - A---B---C  (main)
+                \
+            D---E---F  (feature-branch)
+        - A---B---C---D'---E'---F'  (feature-branch)
+    - git merge(create new commit)
+        - A---B---C  (main)
+                \
+            D---E---F  (feature-branch)
+
+        A---B---C---M  (main)
+             \     /
+          D---E---F  (feature-branch)
+
+    - Cherrypick(allows you to apply a specific commit from one branch onto another branch)
+    - Sqaush(the process of combining multiple commits into a single commit)
+        A---B---C  (main)
+                 \
+                  D'  (feature-branch)
+
+    - D is the new commit formed by combining multiple commits
+    - Git Merge conflicts
+
+Fork command    
+    - open source contribution
+    - fork the branch
+    - do changes
+    - git push
+    - go in contribution tab and raise pull request
+Github pages
+    - setting -> pages -> deploy static webpages via github
+
+Data compression is a technique by which we can make our application light ->> means server can serve the request fast.
+
+Nginx vs Apache
+
+How to run go application in background using pm2
+    -pm2 init simple  // it will generate ecosystem.config.js file 
+    -module.exports = { // add this code in ecosystem.config.js file
+                        apps: [
+                            {
+                            name: 'myapp',
+                            script: 'go',
+                            args: 'run main.go',
+                            interpreter: 'none',
+                            }
+                        ]
+                    };
+    -pm2 start ecosystem.config.js // run this to start the server
