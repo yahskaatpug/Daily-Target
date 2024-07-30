@@ -1,0 +1,88 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.centered{
+    margin-top: 200px;
+    margin-left: 30px;
+    margin-bottom: 2px;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input[type="text"]{
+    width: 200%;
+    height: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    padding-left: 35px;
+    margin-left: -83px;
+}
+
+/* .voice-icon{
+    margin-left: 18px;
+    transform: translateY(100%); 
+    width: 20px;
+    height: 20px; 
+    position: absolute;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Microphone_icon.svg/2048px-Microphone_icon.svg.png');
+    background-size: cover;
+} */
+
+.search-icon {
+    margin-left: -72px;
+    transform: translateY(165%);
+    width: 20px;
+    height: 20px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/2048px-Search_Icon.svg.png'); /* Example icon URL */
+    background-size: cover;
+  }
+
+  .nav{
+    margin-top: 25px;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .item{
+    cursor: pointer;
+    font-size:small;
+  }
+
+  .item:hover{
+    text-decoration: underline;
+  }
+
+  .profile-icon {
+    width: 32px; 
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden; 
+    border: 2px solid #ddd; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.profile-icon img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
